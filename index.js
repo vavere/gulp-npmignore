@@ -27,6 +27,7 @@ var FILES = [
 'bower.json',
 'Cakefile',
 'Makefile',
+'Makefile.dryice.js',
 'Gruntfile.js',
 'test.js',
 'example.js',
