@@ -1,6 +1,6 @@
 {
   "name": "gulp-npmignore",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "desperate attempt to remove unnecessary things through gulp task",
   "repository": {
     "type": "git",
