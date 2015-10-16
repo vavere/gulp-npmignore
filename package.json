@@ -4,7 +4,7 @@
   "description": "desperate attempt to remove unnecessary things through gulp task",
   "repository": {
     "type": "git",
-    "url": "git://s9/gulp-npmignore"
+    "url": "https://github.com/vavere/gulp-npmignore"
   },  
   "main": "index.js",
   "scripts": {
