@@ -59,20 +59,20 @@ module.exports = function () {
     });
   }
 
-	return through.obj(function (file, enc, cb) {
+  return through.obj(function (file, enc, cb) {
 
-		if (file.stat.isDirectory() && gulpmatch(file, DIRS)) {
-		  if (!inDirs(file)) dirs.push(file);
-		  return cb();
-		}
-		
-	  if (!file.stat.isDirectory() && gulpmatch(file, FILES))
-	    return cb(null, inDirs(file) ? null : file);
+    if (file.stat.isDirectory() && gulpmatch(file, DIRS)) {
+      if (!inDirs(file)) dirs.push(file);
+      return cb();
+    }
+    
+    if (!file.stat.isDirectory() && gulpmatch(file, FILES))
+      return cb(null, inDirs(file) ? null : file);
 
-		cb();
-	}, function (cb) {
-	  dirs.forEach(function(d) {this.push(d)}, this);
-	  cb();
-	});
-	
+    cb();
+  }, function (cb) {
+    dirs.forEach(function(d) {this.push(d)}, this);
+    cb();
+  });
+  
 };
