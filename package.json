@@ -1,12 +1,16 @@
 {
   "name": "gulp-npmignore",
   "version": "0.0.1",
-  "description": "",
+  "description": "desperate attempt to remove unnecessary things through gulp task",
+  "repository": {
+    "type": "git",
+    "url": "git://s9/gulp-npmignore"
+  },  
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
-  "author": "",
+  "author": "Lauris Vāvere",
   "license": "MIT",
   "dependencies": {
     "gulp-match": "^1.0.0",
