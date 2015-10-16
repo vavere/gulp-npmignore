@@ -25,16 +25,15 @@ var FILES = [
 'component.json',
 'composer.json',
 'bower.json',
-'Cakefile',
-'Makefile',
-'Makefile.dryice.js',
-'Gruntfile.js',
+'cakefile',
+'makefile',
+'makefile.dryice.js',
+'gruntfile.js',
 'test.js',
 'example.js',
-'AUTHORS',
+'authors',
 'changelog',
-'CHANGELOG',
-'CONTRIBUTORS',
+'contributors',
 '*.coffee',
 '*.svg',
 '*.py',
@@ -48,7 +47,12 @@ var FILES = [
 '*.properties',
 '*.map',
 '*.patch'
-].map(function (g) {return  '**/' + g;});
+].map(function (g) {return  '**/' + g;})
+.concat([
+'license.*',
+'readme.*'
+].map(function (g) {return  '!**/' + g;})
+);
   
 module.exports = function () {
   var dirs = [];
@@ -62,12 +66,12 @@ module.exports = function () {
 
   return through.obj(function (file, enc, cb) {
 
-    if (file.stat.isDirectory() && gulpmatch(file, DIRS)) {
+    if (file.stat.isDirectory() && gulpmatch(file, DIRS, {nocase: true})) {
       if (!inDirs(file)) dirs.push(file);
       return cb();
     }
     
-    if (!file.stat.isDirectory() && gulpmatch(file, FILES))
+    if (!file.stat.isDirectory() && gulpmatch(file, FILES, {nocase: true}))
       return cb(null, inDirs(file) ? null : file);
 
     cb();

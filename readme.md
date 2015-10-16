@@ -6,13 +6,11 @@ Desperate attempt to remove unnecessary things through gulp task.
 
 ```
 $ npm install --save-dev gulp-npmignore
-
 ```
 
 ## Usage (as gulp task)
 
 ```js
-
 var npmignore = require('gulp-npmignore');
 
 gulp.task('npmignore', function () {
@@ -20,7 +18,6 @@ gulp.task('npmignore', function () {
     .pipe(npmignore())
     .pipe(vinylPaths(del))
 });
-
 ```
 
 ## License
