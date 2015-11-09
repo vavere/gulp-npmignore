@@ -5,7 +5,7 @@ var vinylPaths = require('vinyl-paths');
 var del = require('del');
 var npmignore = require('./');
 
-var stream = gulp.src('node_modules/**', {read: false})
+var stream = gulp.src('node_modules/**', {read: false, dot: true})
   .pipe(npmignore())
   .pipe(debug({title: 'del'}))
   .pipe(vinylPaths(del))

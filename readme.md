@@ -11,7 +11,10 @@ $ npm install --save-dev gulp-npmignore
 ## Usage (as gulp task)
 
 ```js
+var gulp = require('gulp');
 var npmignore = require('gulp-npmignore');
+var vinylPaths = require('vinyl-paths');
+var del = require('del');
 
 gulp.task('npmignore', function () {
   return gulp.src('node_modules/**', {read: false})

@@ -5,7 +5,6 @@ var gulpmatch = require('gulp-match');
 
 var DIRS = [
 '.*',
-'build',
 'test',
 'tests',
 'support',
