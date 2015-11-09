@@ -1,6 +1,6 @@
 {
   "name": "gulp-npmignore",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "desperate attempt to remove unnecessary things through gulp task",
   "keywords": ["gulpplugin", "npm", "ignore"],
   "repository": {
