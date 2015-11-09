@@ -33,6 +33,7 @@ var FILES = [
 'authors',
 'changelog',
 'contributors',
+'*.sh',
 '*.coffee',
 '*.svg',
 '*.py',
