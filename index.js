@@ -34,6 +34,7 @@ var FILES = [
 'changelog',
 'contributors',
 '*.sh',
+'*.ls',
 '*.coffee',
 '*.svg',
 '*.py',
